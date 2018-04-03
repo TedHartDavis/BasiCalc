@@ -1,7 +1,6 @@
 #include <iostream>
 #include <cstdlib> /* strtod */
 
-
 float getnumber ()
 {
     //std::getline(std::cin, number);
@@ -49,11 +48,31 @@ float circlearea (float radius)
     return result;
 }
 
+float circlediameter (float radius)
+{
+    float result = 0;
+    constexpr float pi = 3.14159;
+    result = pi * radius * 2;
+    return result;
+}
+
+void drawmenu()
+{
+    std::cout << "add - add two numbers" << std::endl;
+    std::cout << "subtract - subtract the second number from the first number" << std::endl;
+    std::cout << "multiply - multiply two numbers" << std::endl;
+    std::cout << "divide - divide the first number by the second number" << std::endl;
+    std::cout << "circlearea - calculate area of a circle" << std::endl;
+    std::cout << "circlediameter - calculate diameter of a circle" << std::endl;
+    std::cout << "exit - exit" << std::endl << std::endl;
+}
+
 int main()
 {
     float num1;
     float num2;
     float result;
+    drawmenu();
 
     for(;;)
         {
@@ -111,9 +130,17 @@ int main()
                 num1 = getnumber();
                 std::cout << circlearea(num1) << std::endl;
             }
+
+            else if (menuchoice == "circlediameter")
+            {
+                std::cout << "First number" << std::endl;
+                num1 = getnumber();
+                std::cout << circlediameter(num1) << std::endl;
+            }
             else
             {
-                std::cout << "Unknown input, try again" << std::endl;
+                std::cout << "Unknown input, try again" << std::endl << std::endl;
+                drawmenu();
             }
         }
     return 0;
