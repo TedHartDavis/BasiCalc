@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1522733133 source:/home/tedster/Projects/codeblocks1/BasiCalc/main.cpp
+	<iostream>
+	<cstdlib>
+
