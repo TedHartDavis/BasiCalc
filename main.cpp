@@ -56,6 +56,20 @@ float circlediameter (float radius)
     return result;
 }
 
+float rectanglearea (float num1, float num2)
+{
+    float result = 0;
+    result = num1 * num2;
+    return result;
+}
+
+float square (float num1)
+{
+    float result = 0;
+    result = num1 * num1;
+    return result;
+}
+
 void drawmenu()
 {
     std::cout << "add - add two numbers" << std::endl;
@@ -64,6 +78,8 @@ void drawmenu()
     std::cout << "divide - divide the first number by the second number" << std::endl;
     std::cout << "circlearea - calculate area of a circle" << std::endl;
     std::cout << "circlediameter - calculate diameter of a circle" << std::endl;
+    std::cout << "rectanglearea - calculate area of a rectangle" << std::endl;
+    std::cout << "square - calculate the square of a number" << std::endl;
     std::cout << "exit - exit" << std::endl << std::endl;
 }
 
@@ -136,6 +152,20 @@ int main()
                 std::cout << "First number" << std::endl;
                 num1 = getnumber();
                 std::cout << circlediameter(num1) << std::endl;
+            }
+            else if (menuchoice == "rectanglearea")
+            {
+                std::cout << "First number" << std::endl;
+                num1 = getnumber();
+                std::cout << "Second number" << std::endl;
+                num2 = getnumber();
+                std::cout << rectanglearea(num1, num2) << std::endl;
+            }
+            else if (menuchoice == "square")
+            {
+                std::cout << "First number" << std::endl;
+                num1 = getnumber();
+                std::cout << square(num1) << std::endl;
             }
             else
             {
